@@ -75,6 +75,11 @@ h2 {
     margin: 30px auto 10px;
 }
 
+h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
 li {
     margin-bottom: 5px;
 
@@ -88,3 +93,49 @@ li {
     }
 }
 
+/* Profiles section */
+ul:nth-of-type(1) {
+    li {
+        display: inline;
+    }
+}
+
+/* Projects section */
+ul:nth-of-type(2) {
+    li {
+
+        div {
+            clear: both;
+        }
+
+        img {
+            border: 2px solid #222;
+            margin-bottom: 30px;
+
+        }
+
+        &:nth-child(odd) {
+            img {
+                float: right;
+                margin-left: 30px;
+            }
+        }
+
+        &:nth-child(even) {
+            img {
+                float: left;
+                margin-right: 30px;
+            }
+        }
+
+        &:last-child {
+            img {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+footer {
+    clear: both;
+}
