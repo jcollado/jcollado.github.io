@@ -56,23 +56,34 @@ body {
     color: #222;
 }
 
-#content {
+header {
+    width: 900px;
+    margin: 0 auto 10px;
+    padding: 20px 25px;
+    border-radius: 15px 15px 0 0;
+    background: #eee;
+}
+
+main {
     width: 900px;
     margin: auto;
     padding: 25px;
-    border-radius: 15px;
+    border-radius: 0 0 15px 15px;
     background: #eee;
 }
 
 h1 {
     font-size: 40px;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 h2 {
     font-size: 35px;
-    margin: 30px auto 20px;
+    margin: 50px auto 20px;
+
+    &:first-child {
+        margin-top: 0
+    }
 }
 
 h3 {
