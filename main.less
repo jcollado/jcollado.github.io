@@ -49,27 +49,34 @@ table {
 
 /* CSS reset ends here */
 
+@content-width: 700px;
+@content-background-color: #eee;
+@content-border-radius: 15px;
+@background-color: #66a;
+
 body {
     font-size: 20px;
     margin: 20px;
-    background: #66a;
+    background: @background-color;
+    background: linear-gradient(@background-color, lighten(@background-color, 5%));
     color: #222;
 }
 
 header {
-    width: 900px;
+    width: @content-width;
     margin: 0 auto 10px;
     padding: 20px 25px;
-    border-radius: 15px 15px 0 0;
-    background: #eee;
+    border-radius: @content-border-radius @content-border-radius 0 0;
+    background: @content-background-color;
 }
 
 main {
-    width: 900px;
+    width: @content-width;
     margin: auto;
     padding: 25px;
-    border-radius: 0 0 15px 15px;
-    background: #eee;
+    border-radius: 0 0 @content-border-radius @content-border-radius;
+    background: @content-background-color;
+    background: linear-gradient(@content-background-color, darken(@content-background-color, 10%));
 }
 
 h1 {
@@ -143,7 +150,7 @@ ul:nth-of-type(2) {
         }
 
         span {
-            background: #ddd;
+            background: #aaa;
             border-radius: 5px;
             padding: 3px 5px;
             margin-right: 5px;
