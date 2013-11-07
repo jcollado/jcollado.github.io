@@ -126,12 +126,10 @@ ul:nth-of-type(2) {
             clear: both;
         }
 
-        h3 a:hover::after {
-            content: ".";
-        }
-
-        img {
+        div > a {
             float: left;
+            width: 250px;
+            height: 171px;
             margin-right: 30px;
             margin-bottom: 30px;
             border: 2px solid #222;
@@ -140,7 +138,37 @@ ul:nth-of-type(2) {
             &:hover {
                 box-shadow: 6px 6px 4px #aaa;
             }
+        }
 
+        // Nice trick from:
+        // http://css-tricks.com/tinted-images-multiple-backgrounds/
+        .image(@url) {
+            background: url(@url);
+
+            &:hover {
+                background:
+                    linear-gradient(
+                      rgba(127, 127, 127, 0.45),
+                      rgba(127, 127, 127, 0.45),
+                    ),
+                    url(@url);
+            }
+        }
+
+        #hot-or-cold {
+            .image('img/HotOrCold.png');
+        }
+
+        #shopping-list {
+            .image('img/ShoppingList.png');
+        }
+
+        #quiz {
+            .image('img/Quiz.png');
+        }
+
+        h3 a:hover::after {
+            content: ".";
         }
 
         &:last-child {
