@@ -167,8 +167,12 @@ ul:nth-of-type(2) {
             .image('img/Quiz.png');
         }
 
-        h3 a:hover::after {
-            content: ".";
+        h3 {
+          margin-bottom: 20px;
+
+          a:hover::after {
+              content: ".";
+          }
         }
 
         &:last-child {
@@ -178,18 +182,23 @@ ul:nth-of-type(2) {
         }
 
         p {
-            line-height: 150%;
+          margin-bottom: 5px;
         }
 
-        span {
-            background: #bababa;
-            border-radius: 5px;
-            padding: 3px 5px;
-            margin-right: 5px;
+        ul {
+          line-height: 35px;
 
-            &:last-child {
-                margin-right: 0;
-            }
+          li {
+              background: #bababa;
+              border-radius: 5px;
+              padding: 3px 5px;
+              margin-right: 5px;
+
+              &:last-child {
+                  margin-right: 0;
+              }
+          }
+
         }
     }
 }
