@@ -55,158 +55,156 @@ table {
 @background-color: #66a;
 
 body {
-    font-size: 20px;
-    margin: 20px;
-    background: @background-color;
-    background: linear-gradient(@background-color, lighten(@background-color, 5%));
-    color: #222;
+  font-size: 20px;
+  margin: 20px;
+  background: @background-color;
+  background: linear-gradient(@background-color, lighten(@background-color, 5%));
+  color: #222;
 }
 
 header {
-    width: @content-width;
-    margin: 0 auto 10px;
-    padding: 20px 25px;
-    border-radius: @content-border-radius @content-border-radius 0 0;
-    background: @content-background-color;
+  width: @content-width;
+  margin: 0 auto 10px;
+  padding: 20px 25px;
+  border-radius: @content-border-radius @content-border-radius 0 0;
+  background: @content-background-color;
 }
 
 main {
-    width: @content-width;
-    margin: auto;
-    padding: 25px;
-    border-radius: 0 0 @content-border-radius @content-border-radius;
-    background: @content-background-color;
-    background: linear-gradient(@content-background-color, darken(@content-background-color, 10%));
+  width: @content-width;
+  margin: auto;
+  padding: 25px;
+  border-radius: 0 0 @content-border-radius @content-border-radius;
+  background: @content-background-color;
+  background: linear-gradient(@content-background-color, darken(@content-background-color, 10%));
 }
 
 h1 {
-    font-size: 40px;
-    text-align: center;
+  font-size: 40px;
+  text-align: center;
 }
 
 h2 {
-    font-size: 35px;
-    margin: 50px auto 20px;
+  font-size: 35px;
+  margin: 50px auto 20px;
 
-    &:first-child {
-        margin-top: 0
-    }
+  &:first-child {
+    margin-top: 0
+  }
 }
 
 h3 {
-    font-size: 25px;
-    margin-bottom: 10px;
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 
-    a {
-        color: #008;
-        text-decoration: none;
+  a {
+    color: #008;
+    text-decoration: none;
 
-        &:hover {
-            color: #00e;
-        }
+    &:hover {
+      color: #00e;
     }
+  }
 }
 
 /* Profiles section */
 ul:nth-of-type(1) {
-    li {
-        display: inline;
-    }
+  li {
+    display: inline;
+  }
 }
 
 /* Projects section */
 ul:nth-of-type(2) {
-    li {
+  li {
+    div {
+      clear: both;
+    }
 
-        div {
-            clear: both;
-        }
+    div > a {
+      float: left;
+      width: 250px;
+      height: 171px;
+      margin-right: 30px;
+      margin-bottom: 30px;
+      border: 2px solid #222;
+      box-shadow: 4px 4px 4px #aaa;
 
-        div > a {
-            float: left;
-            width: 250px;
-            height: 171px;
-            margin-right: 30px;
-            margin-bottom: 30px;
-            border: 2px solid #222;
-            box-shadow: 4px 4px 4px #aaa;
+      &:hover {
+        box-shadow: 6px 6px 4px #aaa;
+      }
+    }
 
-            &:hover {
-                box-shadow: 6px 6px 4px #aaa;
-            }
-        }
+    // Nice trick from:
+    // http://css-tricks.com/tinted-images-multiple-backgrounds/
+    .image(@url) {
+      background: url(@url);
 
-        // Nice trick from:
-        // http://css-tricks.com/tinted-images-multiple-backgrounds/
-        .image(@url) {
-            background: url(@url);
+      &:hover {
+        background:
+          linear-gradient(
+            rgba(127, 127, 127, 0.45),
+            rgba(127, 127, 127, 0.45),
+          ),
+          url(@url);
+      }
+    }
 
-            &:hover {
-                background:
-                    linear-gradient(
-                      rgba(127, 127, 127, 0.45),
-                      rgba(127, 127, 127, 0.45),
-                    ),
-                    url(@url);
-            }
-        }
+    #hot-or-cold {
+      .image('img/HotOrCold.png');
+    }
 
-        #hot-or-cold {
-            .image('img/HotOrCold.png');
-        }
+    #shopping-list {
+      .image('img/ShoppingList.png');
+    }
 
-        #shopping-list {
-            .image('img/ShoppingList.png');
-        }
+    #quiz {
+      .image('img/Quiz.png');
+    }
 
-        #quiz {
-            .image('img/Quiz.png');
-        }
+    #doit {
+      .image('http://www.placehold.it/250x171');
+    }
 
-        #doit {
-            .image('http://www.placehold.it/250x171');
-        }
+    h3 {
+      margin-bottom: 20px;
 
-        h3 {
-          margin-bottom: 20px;
+      a:hover::after {
+        content: ".";
+      }
+    }
 
-          a:hover::after {
-              content: ".";
-          }
-        }
+    &:last-child {
+      img {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+
+    ul {
+      line-height: 35px;
+
+      li {
+        background: #bababa;
+        border-radius: 5px;
+        padding: 3px 5px;
+        margin-right: 5px;
 
         &:last-child {
-            img {
-                margin-bottom: 0;
-            }
+          margin-right: 0;
         }
-
-        p {
-          margin-bottom: 5px;
-        }
-
-        ul {
-          line-height: 35px;
-
-          li {
-              background: #bababa;
-              border-radius: 5px;
-              padding: 3px 5px;
-              margin-right: 5px;
-
-              &:last-child {
-                  margin-right: 0;
-              }
-          }
-
-        }
+      }
     }
+  }
 }
 
 footer {
-    clear: both;
+  clear: both;
 }
