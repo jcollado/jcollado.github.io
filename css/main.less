@@ -1,0 +1,41 @@
+#profiles ul li {
+  display: inline;
+}
+
+// Nice trick from:
+// http://css-tricks.com/tinted-images-multiple-backgrounds/
+.image(@url) {
+  background: url(@url);
+  width: 250px;
+  height: 171px;
+  display: block;
+
+  &:hover {
+    background:
+      linear-gradient(
+        rgba(127, 127, 127, 0.45),
+        rgba(127, 127, 127, 0.45),
+      ),
+      url(@url);
+  }
+}
+
+#hot-or-cold {
+  .image('../img/HotOrCold.png');
+}
+
+#shopping-list {
+  .image('../img/ShoppingList.png');
+}
+
+#quiz {
+  .image('../img/Quiz.png');
+}
+
+#doit {
+  .image('../img/DoIt.png');
+}
+
+.spacer {
+  margin-top: 40px;
+}
