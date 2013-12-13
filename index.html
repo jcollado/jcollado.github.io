@@ -58,75 +58,20 @@
       </div>
 
       <h2>Projects</h2>
-      <div class="row">
-        <div class="col-md-3">
-          <a id="hot-or-cold" href="/HotOrCold"></a>
-        </div>
-        <div class="col-md-9">
-          <h3><a href="/HotOrCold">Hot or cold</a></h3>
-          <p>Number guessing game</p>
-          <ul>
-            <li class="label label-default">html</li>
-            <li class="label label-default">css</li>
-            <li class="label label-default">javascript</li>
-            <li class="label label-default">jquery</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row spacer">
-        <div class="col-md-3">
-          <a id="shopping-list" href="/ShoppingList"></a>
-        </div>
-        <div class="col-md-9">
-          <h3><a href="/ShoppingList">Shopping list</a></h3>
-          <p>Todo list application</p>
-          <ul>
-            <li class="label label-default">html</li>
-            <li class="label label-default">css</li>
-            <li class="label label-default">javascript</li>
-            <li class="label label-default">jquery</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row spacer">
-        <div class="col-md-3">
-          <a id="quiz" href="/QuizKnockout"></a>
-        </div>
-        <div class="col-md-9">
-          <h3><a href="/QuizKnockout">Quiz</a></h3>
-          <p>Programming language quiz</p>
-          <ul>
-            <li class="label label-default">html</li>
-            <li class="label label-default">css</li>
-            <li class="label label-default">less</li>
-            <li class="label label-default">javascript</li>
-            <li class="label label-default">jquery</li>
-            <li class="label label-default">knockout</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row spacer">
-        <div class="col-md-3">
-          <a id="doit" href="/DoIt"></a>
-        </div>
-        <div class="col-md-9">
-          <h3><a href="/DoIt">Do it!</a></h3>
-          <p>
-            Todo list application using
-            <a href="http://www.rememberthemilk.com">Remember The Milk</a>
-            as a backend
-          </p>
-          <ul>
-            <li class="label label-default">html</li>
-            <li class="label label-default">css</li>
-            <li class="label label-default">less</li>
-            <li class="label label-default">javascript</li>
-            <li class="label label-default">jquery</li>
-            <li class="label label-default">knockout</li>
-          </ul>
+      <div data-bind="foreach: projects">
+        <div class="row spacer">
+          <div class="col-md-3">
+            <a data-bind="attr: {href: url}">
+              <img data-bind="attr: { src: img }">
+            </a>
+          </div>
+          <div class="col-md-9">
+            <h3><a data-bind="text: name, attr: {href: url}"></a></h3>
+            <p data-bind="html: description"></p>
+            <ul data-bind="foreach: tags">
+              <li class="label label-default" data-bind="text: $data"></li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -139,6 +84,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/knockout-3.0.0.js"></script>
     <script type="text/javascript" src="js/application.js"></script>
   </body>
 </html>
