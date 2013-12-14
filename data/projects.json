@@ -3,6 +3,7 @@
     "name": "Hot or cold",
     "description": "Number guessing game",
     "url": "/HotOrCold",
+    "src": "https://github.com/jcollado/HotOrCold/tree/gh-pages",
     "img": "img/HotOrCold.png",
     "tags": ["html", "css", "javascript", "jquery"]
   },
@@ -10,6 +11,7 @@
     "name": "Shopping list",
     "description": "Todo list application",
     "url": "/ShoppingList",
+    "src": "https://github.com/jcollado/ShoppingList/tree/gh-pages",
     "img": "img/ShoppingList.png",
     "tags": ["html", "css", "javascript", "jquery"]
   },
@@ -17,6 +19,7 @@
     "name": "Quiz",
     "description": "Programming language quiz",
     "url": "/QuizKnockout",
+    "src": "https://github.com/jcollado/QuizKnockout/tree/gh-pages",
     "img": "img/Quiz.png",
     "tags": ["html", "css", "less", "javascript", "jquery", "knockout"]
   },
@@ -24,6 +27,7 @@
     "name": "Do it!",
     "description": "Todo list application using <a href=\"http://www.rememberthemilk.com\">Remember The Milk</a> as a backend",
     "url": "/DoIt",
+    "src": "https://github.com/jcollado/DoIt/tree/gh-pages",
     "img": "img/DoIt.png",
     "tags": ["html", "css", "less", "javascript", "jquery", "knockout"]
   }

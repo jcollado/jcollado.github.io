@@ -49,6 +49,11 @@
               </a>
             </li>
             <li>
+              <a href="https://github.com/jcollado/">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+            <li>
               <a href="https://www.google.com/+JavierColladoCabeza">
                 <i class="fa fa-google-plus-square"></i>
               </a>
@@ -93,7 +98,12 @@
             <ul class="list-unstyled" data-bind="foreach: tags">
               <li class="label label-default" data-bind="text: $data"></li>
             </ul>
-            <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a class="btn btn-primary" data-bind="attr: {href: url}">
+              View Project <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+            <a class="btn btn-primary" data-bind="attr: {href: src}">
+              <i class="fa fa-github"></i> View source code <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
           </div>
         </div>
 
