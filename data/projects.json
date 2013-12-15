@@ -37,6 +37,6 @@
     "url": "/",
     "src": "https://github.com/jcollado/jcollado.github.io",
     "img": "img/Portfolio.png",
-    "tags": ["html", "css", "bootstrap", "javascript", "knockout"]
+    "tags": ["html", "css", "bootstrap", "javascript", "jquery", "knockout"]
   }
 ]
