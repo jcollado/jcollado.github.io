@@ -29,6 +29,14 @@
     "url": "/DoIt",
     "src": "https://github.com/jcollado/DoIt/tree/gh-pages",
     "img": "img/DoIt.png",
-    "tags": ["html", "css", "less", "javascript", "jquery", "knockout"]
+    "tags": ["html", "css", "less", "javascript", "jquery", "knockout", "sammy"]
+  },
+  {
+    "name": "Portfolio",
+    "description": "The web page you're looking at right now",
+    "url": "/",
+    "src": "https://github.com/jcollado/jcollado.github.io",
+    "img": "img/Portfolio.png",
+    "tags": ["html", "css", "less", "bootstrap", "javascript", "knockout"]
   }
 ]
