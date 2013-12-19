@@ -29,7 +29,7 @@
     "url": "/DoIt",
     "src": "https://github.com/jcollado/DoIt/tree/gh-pages",
     "img": "img/DoIt.png",
-    "tags": ["html", "css", "less", "javascript", "jquery", "knockout", "sammy"]
+    "tags": ["html", "css", "less", "javascript", "jquery", "underscore", "knockout", "sammy"]
   },
   {
     "name": "Portfolio",
